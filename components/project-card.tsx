@@ -1,38 +1,40 @@
 "use client"
 
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-
-type ProjectCardProps = {
-  title: string
-  description: string
-  imageAlt: string
-  href?: string
-  status?: "wip" | "done"
-}
-
-export function ProjectCard({ title, description, imageAlt, href = "#", status }: ProjectCardProps) {
+export default function ProjectCard({ title, description, image, imageAlt, status }) {
   return (
-    <Card className="transition-colors hover:border-sky-300/40 hover:shadow-sm hover:shadow-sky-200/30 dark:hover:shadow-sky-900/40">
-      <CardHeader>
-        <CardTitle className="text-balance">{title}</CardTitle>
-      </CardHeader>
-      <CardContent className="space-y-3">
-        <img src="/placeholder-1u5uy.png" alt={imageAlt} className="h-40 w-full rounded-md object-cover" />
-        <p className="text-sm text-muted-foreground text-pretty">{description}</p>
-        {status === "wip" && (
-          <span className="inline-flex items-center rounded-md bg-teal-50 px-2 py-1 text-xs font-medium text-teal-700 ring-1 ring-inset ring-teal-600/20 dark:bg-teal-950/30 dark:text-teal-300">
-            Work in progress
+    <div className="bg-neutral-900 rounded-2xl p-4 shadow-lg flex flex-col justify-between hover:shadow-xl transition-shadow duration-300">
+      {/* Project Image */}
+      {image && (
+        <div className="w-full h-40 flex items-center justify-center mb-3 bg-neutral-800 rounded-xl overflow-hidden">
+          <img
+            src={image}
+            alt={imageAlt || title}
+            className="max-h-full max-w-full object-contain"
+          />
+        </div>
+      )}
+
+      {/* Project Info */}
+      <div className="flex-grow">
+        <h3 className="text-lg font-semibold text-white">{title}</h3>
+        <p className="text-sm text-gray-400 mt-1">{description}</p>
+      </div>
+
+      {/* Status + Button */}
+      <div className="mt-4 flex items-center justify-between">
+        {status === "wip" ? (
+          <span className="text-xs font-medium px-2 py-1 bg-yellow-700/40 text-yellow-300 rounded-md">
+            Work in Progress
+          </span>
+        ) : (
+          <span className="text-xs font-medium px-2 py-1 bg-green-700/40 text-green-300 rounded-md">
+            Completed
           </span>
         )}
-      </CardContent>
-      <CardFooter>
-        <Button asChild variant="secondary" className="hover:border-sky-300 hover:bg-secondary">
-          <a href={href} aria-disabled={href === "#"} onClick={(e) => href === "#" && e.preventDefault()}>
-            Details
-          </a>
-        </Button>
-      </CardFooter>
-    </Card>
-  )
+        <button className="px-3 py-1 bg-neutral-800 hover:bg-neutral-700 rounded-lg text-sm text-gray-200 transition-colors">
+          Details
+        </button>
+      </div>
+    </div>
+  );
 }
