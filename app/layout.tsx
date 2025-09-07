@@ -9,7 +9,7 @@ import { SiteNavbar } from "@/components/site-navbar"
 import { Suspense } from "react"
 
 export const metadata: Metadata = {
-  title: "Het Trivedi — Portfolio",
+  title: "Het Trivedi Portfolio",
   description: "Computer Networking Professional | Aspiring AI/ML Specialist",
   generator: "v0.app",
   keywords: [
@@ -39,6 +39,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/favicon.svg" />
+      </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <Suspense fallback={<div>Loading...</div>}>
