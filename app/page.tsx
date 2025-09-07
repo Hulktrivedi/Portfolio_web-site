@@ -104,7 +104,7 @@ export default function Page() {
           <ProjectCard
             title="ChimeraOS"
             description="Work-in-progress project (details placeholder)."
-            image="/images/chimeraos.svg"
+            image="/chiameraostmplogo.png"
             imageAlt="ChimeraOS placeholder"
             status="wip"
           />
