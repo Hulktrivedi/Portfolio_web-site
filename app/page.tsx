@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { ProjectCard } from "@/components/project-card"
+import  ProjectCard  from "@/components/project-card"
 import { ContactForm } from "@/components/contact-form"
 import { Github, Linkedin, Twitter } from "lucide-react"
 
