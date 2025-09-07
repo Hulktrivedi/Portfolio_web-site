@@ -165,7 +165,7 @@ export default function Page() {
           </div>
           <div>
             <h3 className="text-lg font-medium">Social</h3>
-            <p className="mt-2 text-sm text-muted-foreground">Links are placeholders — update with real URLs.</p>
+            <p className="mt-2 text-sm text-muted-foreground">Links</p>
             <div className="mt-3 flex gap-3">
               <a
                 href="https://github.com/Hulktrivedi"
