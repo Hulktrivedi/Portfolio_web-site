@@ -168,14 +168,14 @@ export default function Page() {
             <p className="mt-2 text-sm text-muted-foreground">Links are placeholders — update with real URLs.</p>
             <div className="mt-3 flex gap-3">
               <a
-                href="#"
+                href="https://github.com/Hulktrivedi"
                 aria-label="GitHub"
                 className="group inline-flex items-center justify-center rounded-md border px-3 py-2 transition-colors hover:border-sky-300 hover:bg-secondary"
               >
                 <Github className="size-5 text-foreground/80 group-hover:text-sky-700 dark:group-hover:text-sky-400" />
               </a>
               <a
-                href="#"
+                href="www.linkedin.com/in/hettrivedi2904"
                 aria-label="LinkedIn"
                 className="group inline-flex items-center justify-center rounded-md border px-3 py-2 transition-colors hover:border-sky-300 hover:bg-secondary"
               >
