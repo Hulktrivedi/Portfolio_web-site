@@ -103,14 +103,14 @@ export default function Page() {
         <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <ProjectCard
             title="ChimeraOS"
-            description="Work-in-progress project (details placeholder)."
+            description="ChimaeraOS is a next-gen, open-source operating system focused on speed, security, and adaptability. Its sleek interface and robust architecture make it perfect for both developers and everyday users."
             image="/chiameraostmplogo.png"
             imageAlt="ChimeraOS placeholder"
             status="wip"
           />
           <ProjectCard
             title="JukeMate"
-            description="Work-in-progress project (details placeholder)."
+            description="JukeMate is a powerful tool for offline music lovers, converting and storing playlists from multiple streaming platforms in lossless formats like FLAC."
             image="/JukeMateLogo.svg"
             imageAlt="JukeMate placeholder"
             status="wip"
