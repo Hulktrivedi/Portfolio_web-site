@@ -111,27 +111,32 @@ export default function Page() {
           <ProjectCard
             title="JukeMate"
             description="Work-in-progress project (details placeholder)."
+            image="/JukeMateLogo.svg"
             imageAlt="JukeMate placeholder"
             status="wip"
           />
           <ProjectCard
             title="NetBox Deployment Project"
             description="Network automation & management leveraging NetBox for inventory and change tracking."
+            image="/NetBoxLogo.svg"
             imageAlt="NetBox Deployment placeholder"
           />
           <ProjectCard
             title="Windows Update Automation System"
             description="Virtual machine testing pipeline prior to deploying updates to ~420 PCs."
+            image="/OSUPDATELogo.svg"
             imageAlt="Windows Update Automation placeholder"
           />
           <ProjectCard
             title="Food-Delicacy App"
             description="Concept to make regional Indian delicacies available nationwide."
+            image="/FoodSaaSLogo.svg"
             imageAlt="Food-Delicacy App placeholder"
           />
           <ProjectCard
             title="Logistics Tracking Website"
             description="Multi-carrier tracking with AWB integration."
+            image="/LogisticsTrackingLogo.svg"
             imageAlt="Logistics Tracking placeholder"
           />
         </div>
