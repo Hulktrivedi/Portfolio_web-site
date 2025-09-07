@@ -1,6 +1,21 @@
 "use client"
+// components/project-card.tsx
 
-export default function ProjectCard({ title, description, image, imageAlt, status }) {
+type ProjectCardProps = {
+  title: string;
+  description: string;
+  image?: string;      // optional (since not every project might have one)
+  imageAlt?: string;   // optional
+  status?: "wip" | "completed"; // restricts to two values
+};
+
+export default function ProjectCard({
+  title,
+  description,
+  image,
+  imageAlt,
+  status = "wip", // default value
+}: ProjectCardProps) {
   return (
     <div className="bg-neutral-900 rounded-2xl p-4 shadow-lg flex flex-col justify-between hover:shadow-xl transition-shadow duration-300">
       {/* Project Image */}
