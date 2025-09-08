@@ -41,6 +41,16 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.svg" />
+        <title>Het Trivedi's Portfolio/Resume</title>
+        
+        <meta name="description" content="Portfolio of Het Trivedi, Computer Networking Professional and Developer. Showcasing projects, skills, and experience." />
+        <meta name="keywords" content="Het Trivedi, Networking, Portfolio, Developer, Projects" />
+        <meta name="author" content="Het Trivedi" />
+
+        <meta name="description" content="Portfolio of Het Trivedi, Computer Networking Professional and Developer. Showcasing projects, skills, and experience." />
+        <meta name="keywords" content="Het Trivedi, Networking, Portfolio, Developer, Projects" />
+        <meta name="author" content="Het Trivedi" />
+        
       </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
