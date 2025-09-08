@@ -175,7 +175,7 @@ export default function Page() {
                 <Github className="size-5 text-foreground/80 group-hover:text-sky-700 dark:group-hover:text-sky-400" />
               </a>
               <a
-                href="www.linkedin.com/in/hettrivedi2904"
+                href="https://www.linkedin.com/in/hettrivedi2904"
                 aria-label="LinkedIn"
                 className="group inline-flex items-center justify-center rounded-md border px-3 py-2 transition-colors hover:border-sky-300 hover:bg-secondary"
               >
