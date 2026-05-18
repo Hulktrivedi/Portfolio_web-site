@@ -42,7 +42,7 @@ export default async function Page() {
       </div>
 
       <section className="reveal-up mx-auto max-w-6xl px-4 pb-10 pt-20 sm:pt-28">
-        <div className="max-w-4xl rounded-lg border border-border/45 bg-background/50 p-5 shadow-lg backdrop-blur-sm sm:p-7">
+        <div className="glass max-w-4xl rounded-lg p-5 sm:p-7">
           <p className="text-xs uppercase tracking-[0.12em] text-foreground/70">Portfolio</p>
           <h1 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-6xl">Het Trivedi</h1>
           <p className="mt-5 max-w-3xl text-lg leading-relaxed text-foreground/92">
@@ -70,7 +70,7 @@ export default async function Page() {
 
       <section id="about" className="reveal-up mx-auto max-w-6xl px-4 py-12">
         <div className="grid gap-8 lg:grid-cols-[1.3fr_1fr]">
-          <article className="space-y-4 rounded-lg border border-border/50 bg-background/52 p-6 backdrop-blur-sm">
+          <article className="glass space-y-4 rounded-lg p-6">
             <h2 className="text-2xl font-semibold tracking-tight">About</h2>
             <p className="leading-relaxed text-foreground/85">
               India-based professional with a background in enterprise IT support and network operations. I’ve handled
@@ -82,7 +82,7 @@ export default async function Page() {
               about reliability, delivery speed, and clear technical trade-offs.
             </p>
           </article>
-          <aside className="rounded-lg border border-border/50 bg-background/52 p-6 backdrop-blur-sm">
+          <aside className="glass rounded-lg p-6">
             <h3 className="text-sm font-medium uppercase tracking-[0.08em] text-muted-foreground">Core Skills</h3>
             <ul className="mt-4 space-y-3">
               {skills.map((skill) => (
@@ -96,7 +96,7 @@ export default async function Page() {
       </section>
 
       <section id="resume" className="reveal-up mx-auto max-w-6xl px-4 py-12">
-        <div className="rounded-lg border border-border/50 bg-background/52 p-6 backdrop-blur-sm">
+        <div className="glass rounded-lg p-6">
           <h2 className="text-2xl font-semibold tracking-tight">Resume</h2>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">
             Experience in networking operations, systems administration, automation workflows, and product-facing web
@@ -123,7 +123,7 @@ export default async function Page() {
         <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <li key={project.slug} className="h-full">
-              <article className="project-card fx-border-glow flex h-full flex-col rounded-lg border border-border/50 bg-background/58 p-4 transition-colors hover:border-sky-300 dark:hover:border-sky-700">
+              <article className="glass project-card fx-border-glow flex h-full flex-col rounded-lg p-4 transition-colors hover:border-sky-300/50 dark:hover:border-sky-700/50">
                 <div className="relative mb-4 aspect-[16/10] overflow-hidden rounded-md bg-secondary">
                   <Image
                     src={project.image || "/placeholder.jpg"}
@@ -164,7 +164,7 @@ export default async function Page() {
       </section>
 
       <section id="contact" className="reveal-up mx-auto max-w-6xl px-4 py-12">
-        <div className="grid gap-8 rounded-lg border border-border/50 bg-background/52 p-6 backdrop-blur-sm md:grid-cols-2">
+        <div className="glass grid gap-8 rounded-lg p-6 md:grid-cols-2">
           <div>
             <h2 className="text-2xl font-semibold tracking-tight">Contact</h2>
             <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">

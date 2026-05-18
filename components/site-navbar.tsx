@@ -15,9 +15,7 @@ export function SiteNavbar() {
 
   return (
     <header
-      className={cn(
-        "sticky top-0 z-50 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60",
-      )}
+      className={cn("glass-nav sticky top-0 z-50")}
       role="banner"
     >
       <nav aria-label="Primary" className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">

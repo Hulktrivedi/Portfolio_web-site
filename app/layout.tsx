@@ -61,7 +61,16 @@ export default function RootLayout({
           >
             Skip to main content
           </a>
-          <Suspense fallback={<div>Loading...</div>}>
+          {/* SVG filter for liquid-glass specular distortion — Chrome enhances, others skip */}
+        <svg aria-hidden="true" style={{ position: "absolute", width: 0, height: 0, overflow: "hidden" }}>
+          <defs>
+            <filter id="liquid-glass-filter">
+              <feTurbulence type="fractalNoise" baseFrequency="0.025 0.035" numOctaves="2" seed="5" result="noise" />
+              <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+          </defs>
+        </svg>
+        <Suspense fallback={<div>Loading...</div>}>
             <SiteNavbar />
             <main id="main" className="min-h-dvh">
               {children}
