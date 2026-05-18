@@ -1,5 +1,6 @@
 "use client"
 // components/project-card.tsx
+import Image from "next/image"
 
 type ProjectCardProps = {
   title: string;
@@ -20,11 +21,12 @@ export default function ProjectCard({
     <div className="bg-neutral-900 rounded-2xl p-4 shadow-lg flex flex-col justify-between hover:shadow-xl transition-shadow duration-300">
       {/* Project Image */}
       {image && (
-        <div className="w-full h-40 flex items-center justify-center mb-3 bg-neutral-800 rounded-xl overflow-hidden">
-          <img
+        <div className="relative mb-3 h-40 w-full overflow-hidden rounded-xl bg-neutral-800">
+          <Image
             src={image}
             alt={imageAlt || title}
-            className="max-h-full max-w-full object-contain"
+            fill
+            className="object-contain"
           />
         </div>
       )}

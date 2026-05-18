@@ -9,9 +9,15 @@ import { SiteNavbar } from "@/components/site-navbar"
 import { Suspense } from "react"
 
 export const metadata: Metadata = {
-  title: "Het Trivedi Portfolio",
-  description: "Computer Networking Professional | Aspiring AI/ML Specialist",
+  metadataBase: new URL("https://hettrivediself.dpdns.org"),
+  title: {
+    default: "Het Trivedi | Portfolio",
+    template: "%s | Het Trivedi",
+  },
+  description:
+    "Portfolio of Het Trivedi. Networking, systems automation, and product-minded engineering work.",
   generator: "v0.app",
+  applicationName: "Het Trivedi Portfolio",
   keywords: [
     "Het Trivedi",
     "Networking",
@@ -24,11 +30,16 @@ export const metadata: Metadata = {
     "TailwindCSS",
   ],
   openGraph: {
-    title: "Het Trivedi — Portfolio",
-    description: "Blending IT infrastructure, automation, and software with a passion for AI.",
-    url: "https://example.com",
-    siteName: "Het Trivedi — Portfolio",
+    title: "Het Trivedi | Portfolio",
+    description: "Networking, systems automation, and product-minded engineering work.",
+    url: "https://hettrivediself.dpdns.org",
+    siteName: "Het Trivedi Portfolio",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Het Trivedi | Portfolio",
+    description: "Networking, systems automation, and product-minded engineering work.",
   },
 }
 
@@ -41,19 +52,15 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.svg" />
-        <title>Het Trivedi's Portfolio/Resume</title>
-        
-        <meta name="description" content="Portfolio of Het Trivedi, Computer Networking Professional and Developer. Showcasing projects, skills, and experience." />
-        <meta name="keywords" content="Het Trivedi, Networking, Portfolio, Developer, Projects" />
-        <meta name="author" content="Het Trivedi" />
-
-        <meta name="description" content="Portfolio of Het Trivedi, Computer Networking Professional and Developer. Showcasing projects, skills, and experience." />
-        <meta name="keywords" content="Het Trivedi, Networking, Portfolio, Developer, Projects" />
-        <meta name="author" content="Het Trivedi" />
-        
       </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <a
+            href="#main"
+            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-background focus:px-3 focus:py-2 focus:text-sm focus:shadow-lg"
+          >
+            Skip to main content
+          </a>
           <Suspense fallback={<div>Loading...</div>}>
             <SiteNavbar />
             <main id="main" className="min-h-dvh">
